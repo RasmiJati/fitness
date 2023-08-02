@@ -1,0 +1,7 @@
+D:\.net\fitness\bin\Debug\fitness.exe.config
+D:\.net\fitness\bin\Debug\fitness.exe
+D:\.net\fitness\bin\Debug\fitness.pdb
+D:\.net\fitness\obj\Debug\fitness.csproj.AssemblyReference.cache
+D:\.net\fitness\obj\Debug\fitness.csproj.CoreCompileInputs.cache
+D:\.net\fitness\obj\Debug\fitness.exe
+D:\.net\fitness\obj\Debug\fitness.pdb
