@@ -17,10 +17,10 @@ namespace fitness
             {
                 Console.WriteLine("**************************");
                 Console.WriteLine("Choose the operation :");
-                Console.WriteLine("Enter 1 to create: ");
-                Console.WriteLine("Enter 2 to list:");
-                Console.WriteLine("Enter 3 to delete");
-                Console.WriteLine("Enter 4 to edit");
+                Console.WriteLine("Enter 1 for User: ");
+                Console.WriteLine("Enter 2 for Routine:");
+                Console.WriteLine("Enter 3 for Workout");
+                Console.WriteLine("Enter 4 for Exercise");
                 Console.WriteLine("Enter any key to exit");
                 Console.WriteLine("**************************");
 
@@ -30,16 +30,16 @@ namespace fitness
                 switch (choice)
                 {
                     case "1":
-                        userController.Create();
+                        userController.Options();
                         break;
                     case "2":
-                        userController.ShowAll();
+                        Console.WriteLine();
                         break;
                     case "3":
-                        userController.Delete();
+                        Console.WriteLine();
                         break;
                     case "4":
-                        userController.Edit();
+                        Console.WriteLine();
                         break;
                     default:
                         return;

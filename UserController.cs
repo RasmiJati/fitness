@@ -14,6 +14,42 @@ namespace fitness
         {
             userRepository = new UserRepository();
         }
+        public void Options()
+        {
+            string choice;
+            do
+            {
+                Console.WriteLine("**************************");
+                Console.WriteLine("Choose the operation :");
+                Console.WriteLine("Enter 1 to create: ");
+                Console.WriteLine("Enter 2 to list:");
+                Console.WriteLine("Enter 3 to delete");
+                Console.WriteLine("Enter 4 to edit");
+                Console.WriteLine("Enter any key to exit");
+                Console.WriteLine("**************************");
+
+                Console.WriteLine("Enter your choice");
+                choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "1":
+                        Create();
+                        break;
+                    case "2":
+                        ShowAll();
+                        break;
+                    case "3":
+                        Delete();
+                        break;
+                    case "4":
+                        Edit();
+                        break;
+                    default:
+                        return;
+                }
+            } while (choice != "0");
+        }
         public void Create()
         {
              int id = 0;
@@ -114,6 +150,7 @@ namespace fitness
                 Console.WriteLine("Enter profile info : ");
                 if (profileInfo == null)
                     profileInfo = Console.ReadLine();
+                
                 User u = new User(id, name, email, password, profileInfo);
                 userRepository.Edit(u);
                 Console.WriteLine("Edited successfully");
