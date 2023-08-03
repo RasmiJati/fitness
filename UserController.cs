@@ -80,5 +80,45 @@ namespace fitness
                 Console.WriteLine("Deletion successfull");
             }
         }
+
+        public void Edit()
+        {
+            int id;
+            string name = null;
+            string email = null;
+            string password = null;
+            string profileInfo = null;
+
+            Console.WriteLine("Enter id to edit :");
+            id = Convert.ToInt32(Console.ReadLine());
+
+            User user = userRepository.ShowById(id);
+            if (user == null)
+            {
+                Console.WriteLine("user with id " + id + " not found");
+            }
+            else
+            {
+                Console.WriteLine("Enter user name : ");
+                if (name == null)
+                    name = Console.ReadLine();
+
+                Console.WriteLine("Enter email : ");
+                if (email == null)
+                    email = Console.ReadLine();
+
+                Console.WriteLine("Enter password : ");
+                if (password == null)
+                    password = Console.ReadLine();
+
+                Console.WriteLine("Enter profile info : ");
+                if (profileInfo == null)
+                    profileInfo = Console.ReadLine();
+                User u = new User(id, name, email, password, profileInfo);
+                userRepository.Edit(u);
+                Console.WriteLine("Edited successfully");
+
+            }
+        }
     }
 }

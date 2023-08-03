@@ -20,7 +20,8 @@ namespace fitness
                 Console.WriteLine("Enter 1 to create: ");
                 Console.WriteLine("Enter 2 to list:");
                 Console.WriteLine("Enter 3 to delete");
-                Console.WriteLine("Enter 4 to exit");
+                Console.WriteLine("Enter 4 to edit");
+                Console.WriteLine("Enter any key to exit");
                 Console.WriteLine("**************************");
 
                 Console.WriteLine("Enter your choice");
@@ -36,6 +37,9 @@ namespace fitness
                         break;
                     case "3":
                         userController.Delete();
+                        break;
+                    case "4":
+                        userController.Edit();
                         break;
                     default:
                         return;

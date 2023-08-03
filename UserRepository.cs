@@ -41,5 +41,16 @@ namespace fitness
         {
             list.Remove(user);
         }        
+
+        public void Edit(User user)
+        {
+            foreach(User u in list)
+            {
+                u.name = user.name;
+                u.email = user.email;
+                u.password = user.password;
+                u.profileInfo = user.profileInfo;
+            }
+        }
     }
 }
