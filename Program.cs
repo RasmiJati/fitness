@@ -15,13 +15,13 @@ namespace fitness
             string choice;
             do
             {
-                Console.WriteLine("---------------------------");
+                Console.WriteLine("**************************");
                 Console.WriteLine("Choose the operation :");
                 Console.WriteLine("Enter 1 to create: ");
                 Console.WriteLine("Enter 2 to list:");
                 Console.WriteLine("Enter 3 to delete");
                 Console.WriteLine("Enter 4 to exit");
-                Console.WriteLine("---------------------------");
+                Console.WriteLine("**************************");
 
                 Console.WriteLine("Enter your choice");
                 choice = Console.ReadLine();
@@ -35,7 +35,7 @@ namespace fitness
                         userController.ShowAll();
                         break;
                     case "3":
-                        Console.WriteLine("show");
+                        userController.Delete();
                         break;
                     default:
                         return;

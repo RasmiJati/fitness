@@ -63,5 +63,22 @@ namespace fitness
                 Console.WriteLine("---------------------------");
             }
         }
+
+        public void Delete()
+        {
+            int id;
+            Console.WriteLine("Enter id to delete :");
+            id = Convert.ToInt32(Console.ReadLine());
+            User user = userRepository.ShowById(id);
+            if(user == null)
+            {
+                Console.WriteLine("user of id " + id + " not found");
+            }
+            else
+            {
+                userRepository.Delete(user);
+                Console.WriteLine("Deletion successfull");
+            }
+        }
     }
 }
