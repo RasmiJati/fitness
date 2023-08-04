@@ -49,6 +49,9 @@
     <Compile Include="ExerciseRepository.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="Interface1.cs" />
+    <Compile Include="Progress.cs" />
+    <Compile Include="ProgressController.cs" />
+    <Compile Include="ProgressRepository.cs" />
     <Compile Include="Routine.cs" />
     <Compile Include="RoutineController.cs" />
     <Compile Include="RoutineRepository.cs" />

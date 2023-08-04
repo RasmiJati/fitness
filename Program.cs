@@ -14,12 +14,14 @@ namespace fitness
             RoutineController routineController = new RoutineController();
             WorkoutController workoutController = new WorkoutController();
             ExerciseController exerciseController = new ExerciseController();
+            ProgressController progressController = new ProgressController();
 
             UserRepository userRepository = new UserRepository();
             RoutineRepository routineRepository = new RoutineRepository();
             WorkoutRepository workoutRepository = new WorkoutRepository();
             ExerciseRepository exerciseRepository = new ExerciseRepository();
-            
+            ProgressRepository progressRepository = new ProgressRepository();
+
             string choice;
             do
             {
@@ -29,7 +31,8 @@ namespace fitness
                 Console.WriteLine("Enter 2 for Routine:");
                 Console.WriteLine("Enter 3 for Workout");
                 Console.WriteLine("Enter 4 for Exercise");
-                Console.WriteLine("Enter 5 or any key to exit");
+                Console.WriteLine("Enter 5 for Progress");
+                Console.WriteLine("Enter 6 or any key to exit");
                 Console.WriteLine("**************************");
 
                 Console.WriteLine("Enter your choice");
@@ -48,6 +51,9 @@ namespace fitness
                         break;
                     case "4":
                         exerciseController.Options(exerciseRepository);
+                        break;
+                    case "5":
+                        progressController.Options(userRepository, progressRepository);
                         break;
                     default:
                         return;
