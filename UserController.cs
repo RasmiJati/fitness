@@ -10,12 +10,9 @@ namespace fitness
     {
         private UserRepository userRepository;
 
-        public UserController()
+        public void Options(UserRepository userRepository)
         {
-            userRepository = new UserRepository();
-        }
-        public void Options()
-        {
+            this.userRepository = userRepository;
             string choice;
             do
             {
@@ -25,7 +22,7 @@ namespace fitness
                 Console.WriteLine("Enter 2 to list:");
                 Console.WriteLine("Enter 3 to delete");
                 Console.WriteLine("Enter 4 to edit");
-                Console.WriteLine("Enter any key to exit");
+                Console.WriteLine("Enter 5 or any key to exit");
                 Console.WriteLine("**************************");
 
                 Console.WriteLine("Enter your choice");
