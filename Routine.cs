@@ -32,7 +32,7 @@ namespace fitness
 
         public override string ToString()
         {
-            return "Routine: " + id + " " + user + " " + startTime + " " + endTime + " " + sets + " " + reps;
+            return "\n Id : " + id + "\n User : " + user + " \n Start Time : " + startTime + " \n End Time :" + endTime + " \n Sets : " + sets + " \n Reps : " + reps;
         }
     }
 }

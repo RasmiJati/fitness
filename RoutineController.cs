@@ -35,9 +35,9 @@ namespace fitness
                     case "1":
                         Create();
                         break;
-                    //case "2":
-                    //    ShowAll();
-                    //    break;
+                    case "2":
+                        ShowAll();
+                        break;
                     //case "3":
                     //    Delete();
                     //    break;
@@ -69,9 +69,12 @@ namespace fitness
             List<User> userList = userRepository.ShowAll();
             if (user == null)
             {
+                Console.WriteLine("----------------------");
                 Console.WriteLine("User List :");
                 foreach(User u in userList)
                     Console.WriteLine(u);
+                Console.WriteLine("----------------------");
+
                 int userId = 0;
                 while (userId <= 0)
                 {
@@ -82,13 +85,13 @@ namespace fitness
             }
 
             
-            Console.WriteLine("Enter start date time : ");
+            Console.WriteLine("Enter start date time (yyyy-mm-dd hh:mm:ss): ");
             if(startTime == null)
                 startTime = Console.ReadLine();
             stime = Convert.ToDateTime(startTime);
             
             
-            Console.WriteLine("Enter end date time : ");
+            Console.WriteLine("Enter end date time (yyyy-mm-dd hh:mm:ss): ");
             if(endtime == null)
                 endtime = Console.ReadLine();
             etime = Convert.ToDateTime(endtime);
@@ -110,5 +113,17 @@ namespace fitness
             Console.WriteLine("Created Successfully");
         }
 
+        public void ShowAll()
+        {
+            List<Routine> routines = routineRepository.ShowAll();
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("Routine List :");
+            Console.WriteLine("---------------------------");
+            foreach (Routine routine in routines)
+            {
+                Console.WriteLine(routine);
+                Console.WriteLine("---------------------------");
+            }
+        }
     }
 }
