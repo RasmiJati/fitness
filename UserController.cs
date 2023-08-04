@@ -91,11 +91,7 @@ namespace fitness
             Console.WriteLine("---------------------------");
             foreach(User u in users)
             {
-                Console.WriteLine("Id: "+u.id);
-                Console.WriteLine("Name: "+u.name);
-                Console.WriteLine("Email: "+u.email);
-                Console.WriteLine("Password: " +u.password);
-                Console.WriteLine("Profile Info: " +u.profileInfo);
+                Console.WriteLine(u);
                 Console.WriteLine("---------------------------");
             }
         }

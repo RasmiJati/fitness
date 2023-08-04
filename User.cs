@@ -27,5 +27,10 @@ namespace fitness
             this.password = password;
             this.profileInfo = profileInfo;
         }
+
+        public override string ToString()
+        {
+            return "\n ID : " + id + "\n Name : " + name + "\n Email :  " + email + "\n Password : " + password + "\n Profile Info :  " + profileInfo;
+        }
     }
 }
