@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractRepository.cs" />
+    <Compile Include="Exercise.cs" />
+    <Compile Include="ExerciseController.cs" />
+    <Compile Include="ExerciseRepository.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="Interface1.cs" />
     <Compile Include="Routine.cs" />
