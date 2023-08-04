@@ -8,10 +8,13 @@ namespace fitness
 {
     class Program
     {
-        private static UserController userController;
         static void Main(string[] args)
         {
-            userController = new UserController();
+            UserController userController = new UserController();
+            RoutineController routineController = new RoutineController();
+            UserRepository userRepository = new UserRepository();
+            RoutineRepository routineRepository = new RoutineRepository();
+
             string choice;
             do
             {
@@ -21,7 +24,7 @@ namespace fitness
                 Console.WriteLine("Enter 2 for Routine:");
                 Console.WriteLine("Enter 3 for Workout");
                 Console.WriteLine("Enter 4 for Exercise");
-                Console.WriteLine("Enter any key to exit");
+                Console.WriteLine("Enter 5 or any key to exit");
                 Console.WriteLine("**************************");
 
                 Console.WriteLine("Enter your choice");
@@ -30,10 +33,10 @@ namespace fitness
                 switch (choice)
                 {
                     case "1":
-                        userController.Options();
+                        userController.Options(userRepository);
                         break;
                     case "2":
-                        Console.WriteLine();
+                        routineController.Options(userRepository,routineRepository);
                         break;
                     case "3":
                         Console.WriteLine();
