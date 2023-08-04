@@ -12,9 +12,11 @@ namespace fitness
         {
             UserController userController = new UserController();
             RoutineController routineController = new RoutineController();
+            WorkoutController workoutController = new WorkoutController();
+
             UserRepository userRepository = new UserRepository();
             RoutineRepository routineRepository = new RoutineRepository();
-
+            WorkoutRepository workoutRepository = new WorkoutRepository();
             string choice;
             do
             {
@@ -39,7 +41,7 @@ namespace fitness
                         routineController.Options(userRepository,routineRepository);
                         break;
                     case "3":
-                        Console.WriteLine();
+                        workoutController.Options(workoutRepository, routineRepository);
                         break;
                     case "4":
                         Console.WriteLine();
