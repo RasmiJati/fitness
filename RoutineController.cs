@@ -38,9 +38,9 @@ namespace fitness
                     case "2":
                         ShowAll();
                         break;
-                    //case "3":
-                    //    Delete();
-                    //    break;
+                    case "3":
+                        Delete();
+                        break;
                     //case "4":
                     //    Edit();
                     //    break;
@@ -123,6 +123,23 @@ namespace fitness
             {
                 Console.WriteLine(routine);
                 Console.WriteLine("---------------------------");
+            }
+        }
+
+        public void Delete()
+        {
+            int id;
+            Console.WriteLine("Enter id to delete : ");
+            id = Convert.ToInt32(Console.ReadLine());
+            Routine routine = routineRepository.ShowById(id);
+            if(routine == null)
+            {
+                Console.WriteLine("Routine with id " + id + " not found");
+            }
+            else
+            {
+                routineRepository.Delete(routine);
+                Console.WriteLine("Deletion Sucessfull");
             }
         }
     }
