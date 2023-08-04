@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace fitness
 {
-    class Routine
+    class Routine : IEntity
     {
         public int id { get; set; }
         public User user { get; set; }

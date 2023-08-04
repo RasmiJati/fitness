@@ -6,50 +6,21 @@ using System.Threading.Tasks;
 
 namespace fitness
 {
-    class UserRepository
+    class UserRepository : AbstractRepository<User>
     {
-        private List<User> list;
-        public UserRepository()
-        {
-            list = new List<User>();
-        }
-
-        public void Create(User user)
-        {
-            list.Add(user);
-        }
-
-        public List<User> ShowAll()
-        {
-            return this.list;
-
-        }
-
-        public User ShowById(int id)
-        {
-            foreach(User u in list)
-            {
-                if(u.id == id)
-                {
-                    return u;
-                }
-            }
-            return null;
-        }
-
-        public void Delete(User user)
-        {
-            list.Remove(user);
-        }        
 
         public void Edit(User user)
         {
-            foreach(User u in list)
+            foreach(User u in ShowAll())
             {
-                u.name = user.name;
-                u.email = user.email;
-                u.password = user.password;
-                u.profileInfo = user.profileInfo;
+                if (u.id == user.id)
+                {
+                    u.name = user.name;
+                    u.email = user.email;
+                    u.password = user.password;
+                    u.profileInfo = user.profileInfo;
+                    break;
+                }
             }
         }
     }

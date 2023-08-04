@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractRepository.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="Interface1.cs" />
     <Compile Include="Routine.cs" />
     <Compile Include="RoutineController.cs" />
     <Compile Include="RoutineRepository.cs" />
